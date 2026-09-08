@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Hair Lounge — Case Study | Jaspinder Kaur</title>
+  <meta name="description" content="The Hair Lounge case study — cinematic, high-end site prototype by Jaspinder Kaur." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP + ScrollTrigger (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Three.js (r148) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+</head>
+<body class="dark">
+  <!-- Loading overlay -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="logo">THE HAIR LOUNGE</div>
+      <div class="progress"><span id="progressBar"></span></div>
+      <div class="small">A cinematic case study by Jaspinder Kaur</div>
+    </div>
+  </div>
+
+  <header class="project-header">
+    <div class="container header-inner">
+      <a href="/" class="back">← Back to Portfolio</a>
+      <nav class="ph-nav">
+        <a href="#overview">Overview</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="project-main">
+    <section class="hero cinematic">
+      <div class="hero-inner container">
+        <div class="hero-left glass">
+          <h1 class="brand-title">The Hair Lounge</h1>
+          <p class="subtitle">Winnipeg — High-end salon experience</p>
+          <p class="lead">An award-worthy cinematic redesign focused on storytelling, booking conversions, and brand prestige. I used motion, layered depth, and interactive moments to make the site memorable and performant.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-gold" href="#gallery">Explore Gallery</a>
+            <a class="btn btn-outline" href="#contact">Book a Call</a>
+          </div>
+
+          <ul class="facts">
+            <li><strong>Address</strong><span>271 Grassie Blvd, Winnipeg, MB R2G 2L7</span></li>
+            <li><strong>Phone</strong><span>(204) 414-9393</span></li>
+            <li><strong>Rating</strong><span>4.7 / 5 (Google)</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <canvas id="threeCanvas" class="three-canvas" aria-hidden="true"></canvas>
+          <picture class="hero-fallback">
+            <source srcset="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1400&auto=format&fit=crop" media="(max-width:700px)">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" alt="The Hair Lounge salon interior" loading="lazy">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section id="overview" class="section glass panel container">
+      <div class="grid-2">
+        <div>
+          <h2>Project Goal</h2>
+          <p>Create an ultra-premium, fully animated website with cinematic storytelling, premium motion graphics, 3D cutouts and immersive interactions — blending Apple, Awwwards and luxury fashion cues.</p>
+
+          <h3>Design Principles</h3>
+          <ul>
+            <li>Ultra-premium visuals with generous whitespace</li>
+            <li>Smooth scrolling & page transitions</li>
+            <li>Mobile-first and accessibility-aware</li>
+            <li>High-conversion CTA & booking flows</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Visual Strategy</h3>
+          <p>Dark & light mode support, glassmorphism, layered depth, large cinematic typography and subtle gold accents for a luxurious feel.</p>
+
+          <h3>Key Animations</h3>
+          <ol>
+            <li>Logo reveal and loader progress</li>
+            <li>Scroll-triggered reveals & parallax</li>
+            <li>Mouse-reactive 3D hero scene</li>
+            <li>Staggered gallery entrances</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section container">
+      <h2>Gallery & Case Work</h2>
+      <div class="masonry">
+        <figure class="m-card glass">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="Salon styling" loading="lazy">
+          <figcaption>Lux Salon — booking-forward UI</figcaption>
+        </figure>
+
+        <figure class="m-card glass">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop" alt="Salon exterior" loading="lazy">
+          <figcaption>Storefront & curb appeal</figcaption>
+        </figure>
+
+        <figure class="m-card glass">
+          <img src="https://images.unsplash.com/photo-1541542684-cc9aef67f4b7?q=80&w=1200&auto=format&fit=crop" alt="Interior details" loading="lazy">
+          <figcaption>Interior photography & ambience</figcaption>
+        </figure>
+
+        <figure class="m-card glass">
+          <img src="https://images.unsplash.com/photo-1511451745457-1d5d0a4b3c7b?q=80&w=1200&auto=format&fit=crop" alt="Client experience" loading="lazy">
+          <figcaption>Customer journey & booking flow</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="testimonials" class="section container">
+      <h2>Reviews</h2>
+      <div class="testi-wrap">
+        <article class="testi glass">
+          <p class="quote">“They strive to give the best service at every visit!”</p>
+          <footer>— Kayla Dyck</footer>
+        </article>
+
+        <article class="testi glass">
+          <p class="quote">“Great new place she and her friend have opened up.”</p>
+          <footer>— Steven Carlson</footer>
+        </article>
+
+        <article class="testi glass">
+          <p class="quote">“Have been seeing Donna for 20+ years... I always leave happy with my hair.”</p>
+          <footer>— Quintana White</footer>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section glass container contact-panel">
+      <div class="grid-2">
+        <div>
+          <h2>Contact & Directions</h2>
+          <p>Address: 271 Grassie Blvd, Winnipeg, MB R2G 2L7</p>
+          <p>Phone: (204) 414-9393</p>
+          <p>Hours: Closed · Opens 12 a.m. Sun (Labour Day might affect hours)</p>
+
+          <p><a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=271+Grassie+Blvd+Winnipeg" target="_blank" rel="noopener">Open in Google Maps</a></p>
+        </div>
+
+        <form id="projectContact" class="contact-form">
+          <label><span>Name</span><input type="text" name="name" required placeholder="Your full name"></label>
+          <label><span>Email</span><input type="email" name="email" required placeholder="you@example.com"></label>
+          <label><span>Message</span><textarea name="message" rows="5" required placeholder="Tell me about your project..."></textarea></label>
+          <div class="form-row"><button class="btn btn-gold" type="submit">Send Inquiry</button><div id="pcStatus" class="status"></div></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="project-footer">
+    <div class="container">
+      <p>Case study: The Hair Lounge — Prototype by Jaspinder Kaur • <a href="/">Back to portfolio</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
